@@ -886,11 +886,3 @@
               (make-lex-addr skip-count search-result)
               (check-frames-iter var (rest-comp-frames comp-env) (+ skip-count 1))))))
   (check-frames-iter var comp-env 0))
-
-(define z the-empty-environment)
-(set! z (extend-environment '(a b c) '(1 2 3) z))
-(set! z (extend-environment '(d e f) '(10 11 12) z))
-(set! z (extend-environment '(q r o) '(e r *unassigned*) z))
-(set! z (extend-environment '(w x) '(99 12) z))
-
-
